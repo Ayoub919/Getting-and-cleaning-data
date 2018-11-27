@@ -37,7 +37,8 @@ test_Data <- cbind(subject_test,Y_test,X_test)
 #to merge as requested trainig and test data.
 dataset <- rbind(train_Data,test_Data)
 #Uses descriptive activity names to name the activities in the data set
-colnames(dataset)<-c("Subject","Activity",features[,2])
+
+colnames(dataset)<-c("Subject","Activity",as.character(features[,2]))
   
 #2 - Extracts only the measurements on the mean and standard deviation for each measuremen
 #the measurements on the mean and standard deviation for each measurement
